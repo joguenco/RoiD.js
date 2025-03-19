@@ -27,3 +27,21 @@ pnpm run dev
 ```
 pnpm run format
 ```
+## Docker
+Build image:
+```
+docker build . -t roid:latest
+```
+Run container:
+```
+docker run --name roid roid:latest
+```
+## Docker Compose
+```
+docker-compose up -d --build
+```
+## Docker Compose Down
+```
+docker-compose down
+```
+

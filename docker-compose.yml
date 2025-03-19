@@ -1,0 +1,20 @@
+services:
+  roid:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    image: roid:latest
+    container_name: roid
+    network_mode: bridge
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: development
+      NODE_ORACLEDB_USER: dismemayor
+      NODE_ORACLEDB_PASSWORD: d
+      NODE_ORACLEDB_CONNECTIONSTRING: host.docker.internal/orcl
+      NODE_ORACLEDB_LIBDIR: /usr/lib/oracle/19.26/client64/lib
+      SECRET_KEY: supersecretkey
+    extra_hosts:
+      - host.docker.internal:host-gateway
