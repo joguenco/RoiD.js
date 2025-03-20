@@ -31,7 +31,6 @@ async function routeProduct (fastify) {
     })
 
   fastify.get('/products/price/barcode/:barcode',
-    { onRequest: [fastify.jwtAuth] },
     async (req, res) => {
       const barcode = req.params.barcode
       const priceResult = await productService.getPriceByBarcode(fastify.db, barcode)

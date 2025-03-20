@@ -11,6 +11,9 @@ API Rest for order sales, prices, barcode and customer from Oracle Database
 ## Upgrade database
 - Go to sql folder.
 - Sign in database with sql (SQLcl)
+```
+sql dismemayor/d@//localhost:1521/orcl
+```
 - Run 2 times:
 ```
 @upgrade.sql
