@@ -44,4 +44,19 @@ docker-compose up -d --build
 ```
 docker-compose down
 ```
-
+## Show active ports
+- MacOS
+```
+lsof -i -P | grep LISTEN
+```
+```
+netstat -an | grep LISTEN
+```
+- GNU/Linux
+```
+netstat -tulpn
+```
+## Kill process on MacOS
+```
+kill -9 $(lsof -t -i:3000) 
+```
