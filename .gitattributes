@@ -5,3 +5,5 @@
 *.so.11.1 filter=lfs diff=lfs merge=lfs -text
 *.so.10.1 filter=lfs diff=lfs merge=lfs -text
 *.jar filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
+*.dylib.19.1 filter=lfs diff=lfs merge=lfs -text
