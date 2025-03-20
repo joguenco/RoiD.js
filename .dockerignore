@@ -1,4 +1,9 @@
 **/node_modules
 **/InstantClient
 **/doc
+**/sql
 .env
+Dockerfile
+docker-compose.yml
+README.md
+pnpm-lock.yaml
