@@ -3,8 +3,9 @@ SELECT
     p.cod_articulo    code,
     p.codigo_barras   barcode,
     p.nombre_articulo name,
-    price.aux_precio  price,
+    round(price.aux_precio + (price.aux_precio * tax.valor / 100), 2) price,
     price.cod_unidad  uom
 FROM
-    fac_catalogo_precio_d price
-    RIGHT JOIN inv_articulo p ON p.cod_articulo = price.cod_articulo;
+    inv_articulo          p
+    LEFT JOIN fac_catalogo_precio_d price ON p.cod_articulo = price.cod_articulo
+    JOIN inv_iva tax ON p.cod_iva = tax.cod_iva;
